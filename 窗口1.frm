@@ -5,6 +5,7 @@ Begin VB.Form Form1
    ClientLeft      =   5490
    ClientTop       =   4320
    ClientWidth     =   4260
+   Icon            =   "´°¿Ú1.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   2505
    ScaleWidth      =   4260
@@ -80,6 +81,3 @@ Private Sub Form_Load()
     Text1.Text = "0¸ö½ð±Ò"
 End Sub
 
-Private Sub Text1_Change()
-
-End Sub
