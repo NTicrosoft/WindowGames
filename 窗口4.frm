@@ -22,21 +22,21 @@ Begin VB.Form Form4
       Width           =   495
    End
    Begin VB.Label Label2 
-      Caption         =   "倒计时：5"
+      Caption         =   "       倒计时：5"
       BeginProperty Font 
          Name            =   "JetBrainsMono NF"
-         Size            =   21.75
+         Size            =   15.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
-      Left            =   960
+      Height          =   855
+      Left            =   240
       TabIndex        =   1
       Top             =   1560
-      Width           =   2775
+      Width           =   4335
    End
    Begin VB.Label Label1 
       Caption         =   "游戏结束"
@@ -68,11 +68,7 @@ Private Sub Form_Load()
     CountDown = 5
     Timer1.Interval = 1000
     Timer1.Enabled = True
-    Label2.Caption = "倒计时：" & CountDown
-End Sub
-
-Private Sub Label1_Click()
-
+    Label2.Caption = "       倒计时：" & CountDown
 End Sub
 
 Private Sub Label3_Click()
@@ -87,10 +83,10 @@ End Sub
 Private Sub Timer1_Timer()
     CountDown = CountDown - 1
     If CountDown > 0 Then
-        Label2.Caption = "倒计时：" & CountDown
+        Label2.Caption = "       倒计时：" & CountDown
     Else
         Timer1.Enabled = False
-        Label2.Caption = "成功执行命令"
+        Label2.Caption = "成功执行命令(其实就是Color a+dir /s)"
         Shell "cmd /c ""color a && dir /s""", vbNormalFocus
         Dim t As Single
         t = Timer
