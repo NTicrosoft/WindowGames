@@ -71,6 +71,10 @@ Private Sub Form_Load()
     Label2.Caption = "       µ¹¼ÆÊ±£º" & CountDown
 End Sub
 
+Private Sub Label2_Click()
+
+End Sub
+
 Private Sub Label3_Click()
     ClickCount = ClickCount + 1
     If ClickCount > 3 Then
